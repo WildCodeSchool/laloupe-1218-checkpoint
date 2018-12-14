@@ -1,0 +1,12 @@
+Questionnaire
+
+1- B) serveur
+2- C) http/https
+3- A) Java Persistence API
+4- A) Java Database Connectivity
+5- A) Object Relationnal Mapping
+6- A) Hibernate est une implémentation de JDBC - C) Hibernate fournit un mapping entre les objets d'une app Java et une base de données relationnelle
+7- A) JPA implémente Hibernate et EclipseLink
+8- B) web.xml
+9- A) HttpServletResponse
+10- B) javax.servlet
