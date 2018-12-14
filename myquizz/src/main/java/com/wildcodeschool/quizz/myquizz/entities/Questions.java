@@ -16,8 +16,8 @@ import javax.persistence.Table;
 public class Questions {
 
 	
-//	@OneToMany(cascade = CascadeType.ALL, mappedBy="questions")
-//	private List<Answers> answer = new ArrayList<Answers>();
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval=true, mappedBy="question_id")
+	private List<Answers> answer = new ArrayList<Answers>();
 	
 	
 	public Questions() {
@@ -46,7 +46,6 @@ public class Questions {
 	
 	private String question;
 	
-	
 	@Override
 	public String toString() {
 		return "Question [id=" + id + ", question=" + question + "]";
@@ -63,6 +62,14 @@ public class Questions {
 
 	public void setQuestion(String question) {
 		this.question = question;
+	}
+
+	public List<Answers> getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(List<Answers> answer) {
+		this.answer = answer;
 	}
 
 }

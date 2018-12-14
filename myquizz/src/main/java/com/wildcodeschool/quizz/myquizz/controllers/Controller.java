@@ -22,7 +22,7 @@ public class Controller {
 	
 	@RequestMapping("/questions")
 	public List<Questions> getAllQuestions(){
-		return questionRepository.findAll();
+		return this.questionRepository.findAll();
 	}
 	
 	@RequestMapping("/answers")
