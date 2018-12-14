@@ -2,12 +2,15 @@ package com.wildcodeschool.quizz.myquizz.entitie;
 
 
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -18,9 +21,10 @@ public class answer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private int question_id;
+	
 	private String reponse;
 	
+
 	@ManyToOne
     @JoinColumn(name="question_id", nullable=false)
     private question Question;
@@ -30,8 +34,8 @@ public class answer {
 		
 	}
 	
-	public answer(int questionId, String reponse) {
-		this.question_id = questionId;
+	public answer( String reponse) {
+		
 		this.reponse = reponse;		
 	}
 
@@ -42,15 +46,8 @@ public class answer {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public int getQuestion_id() {
-		return question_id;
-	}
-
-	public void setQuestion_id(int question_id) {
-		this.question_id = question_id;
-	}
-
+	
+	
 	public String getReponse() {
 		return reponse;
 	}
@@ -60,12 +57,13 @@ public class answer {
 	}
 
 	public question getQuestion() {
-		return Question;
+	return Question;
 	}
-
+	
 	public void setQuestion(question question) {
 		Question = question;
 	}
+
 
 
 	

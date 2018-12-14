@@ -6,7 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 
@@ -22,15 +23,13 @@ public class question {
 	
 	private String question;
 	
-	@OneToMany(mappedBy="question_id")
+
+	
+	@OneToMany(mappedBy="id")
 	private Set<answer> answer ;
 	
 	public question() {
 		
-	};
-	
-	public question(String question) {
-		this.question = question;
 	}
 
 	public Long getQuestion_id() {
@@ -56,6 +55,7 @@ public class question {
 	public void setAnswer(Set<answer> answer) {
 		this.answer = answer;
 	}
+
 	
 	
 }	
