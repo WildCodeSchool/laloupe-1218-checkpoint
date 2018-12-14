@@ -1,9 +1,9 @@
-package com.wildcodeshcool.quizz.repositories;
+package com.wildcodeschool.quizz.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.wildcodeshool.quizz.entities.Question;
+import com.wildcodeschool.quizz.entities.Question;
 
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long>{

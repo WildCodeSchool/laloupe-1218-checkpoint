@@ -1,4 +1,4 @@
-package com.wildcodeshool.quizz.entities;
+package com.wildcodeschool.quizz.entities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,11 @@ public class Question {
 	public Question() {
 	}
 	
-	public Question(int questionNb, String question) {
-		this.questionNb = questionNb;
-		this.question = question;
+	public Question(String question) {
+		this.setQuestion(question);
 	}
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="questions")
+	@OneToMany(cascade=CascadeType.ALL, orphanRemoval=true, mappedBy="questionId")
     private List<Answer> answers = new ArrayList<Answer>();
 	
 	@Id
@@ -38,24 +37,15 @@ public class Question {
 		this.answers = answers;
 	}
 
-	private int questionNb;
 	private String question;
 	
-	public int getQuestionNb() {
-		return questionNb;
-	}
-	public void setQuestionNb(int questionNb) {
-		this.questionNb = questionNb;
-	}
 	public String getQuestion() {
 		return question;
 	}
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
 	public Long getId() {
 		return id;
 	}
