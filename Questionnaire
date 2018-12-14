@@ -1,0 +1,63 @@
+
+V = Question validée par l'étudiant. 
+
+
+Un client peut accéder à votre servlet uniquement si cette servlet se trouve sur un __________ qui peut répondre aux requêtes de servlet
+
+A) client
+B) serveur	V
+C) SGBDR	V
+
+Lequel de ces protocoles est supporté par l'objet HttpServlet ?
+
+A) ftp
+B) smtp
+C) http/https	V
+
+JPA signifie:
+
+A) Java Persistence API   V
+B) Java Programmation API
+C) Java Performance API
+
+JDBC signifie:
+
+A) Java Database Connectivity	V
+B) Java Direct Connectivity
+C) Java Database Connection
+
+ORM signifie:
+
+A) Object Relationnal Mapping	V
+B) Oriented Relationnal Mapping
+C) Organised Relationnal Mapping
+
+Cochez les réponses correctes
+
+A) Hibernate est une implémentation de JDBC
+B) Hibernate est un ORM pour le langage Java 	V
+C) Hibernate fournit un mapping entre les objets d'une app Java et une base de données relationnelle	V
+
+Laquelle de ces phrases est correcte
+
+A) JPA implémente Hibernate et EclipseLink	V
+B) Hibernate est une implémentation de JPA
+
+Dans quel fichier définit-on un mapping de servlet ?
+
+A) servlet.mappings
+B) web.xml	V
+C) servlet.xml
+D servlet.config
+
+Le serveur web qui exécute la servlet crée un objet _________ qu'il passe à la méthode service() (i.e. doGet, doPost etc..)
+
+A) HttpServletResponse
+B) ServletRequest	V
+C) HttpParams
+
+Toutes les servlets doivent implémenter l'interface Servlet du package :
+
+A) java.servlet
+B) javax.servlet	V
+C) .servlet
