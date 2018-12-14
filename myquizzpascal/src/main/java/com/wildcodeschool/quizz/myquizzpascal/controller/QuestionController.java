@@ -16,7 +16,7 @@ public class QuestionController {
 	@Autowired
 	QuestionRepository questionRepo;
 	
-	@RequestMapping("/create")
+	@RequestMapping("questions/create")
 	public Question createQuestion(String questions) {
 		Question quizz = new Question("Salutation");
 		return questionRepo.save(quizz);
